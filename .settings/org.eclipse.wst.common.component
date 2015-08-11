@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-modules id="moduleCoreId" project-version="1.5.0">
+    <wb-module deploy-name="WeChatYangMei">
+        <wb-resource deploy-path="/" source-path="/target/m2e-wtp/web-resources"/>
+        <wb-resource deploy-path="/" source-path="/src/main/webapp" tag="defaultRootSource"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/sec/main/java"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/resources"/>
+        <wb-resource deploy-path="/WEB-INF/classes" source-path="/src/main/java"/>
+        <dependent-module archiveName="SLP_IpSvc_JAR-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SLP_IpSvc_JAR/SLP_IpSvc_JAR">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SLFAuthCommon-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SLFAuthCommon/SLFAuthCommon">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SLP_AuthClt_JAR-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SLP_AuthClt_JAR/SLP_AuthClt_JAR">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SLFAuthClient-1.0.0.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SLFAuthClient/SLFAuthClient">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SLP_ORM_JAR-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SLP_ORM_JAR/SLP_ORM_JAR">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SLP_TransObj_JAR-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SLP_TransObj_JAR/SLP_TransObj_JAR">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SLP_TransObjUtil_JAR-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SLP_TransObjUtil_JAR/SLP_TransObjUtil_JAR">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SLP_ComnConfig_JAR-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SLP_ComnConfig_JAR/SLP_ComnConfig_JAR">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SLP_ComnUtil_JAR-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SLP_ComnUtil_JAR/SLP_ComnUtil_JAR">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SLP_ComnWeb_JAR-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SLP_ComnWeb_JAR/SLP_ComnWeb_JAR">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SLP_FileSvcWebClt_JAR-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SLP_FileSvcWebClt_JAR/SLP_FileSvcWebClt_JAR">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SLP_CompnDesc_JAR-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SLP_CompnDesc_JAR/SLP_CompnDesc_JAR">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <dependent-module archiveName="SLP_TT_TransObj_JAR-0.0.1-SNAPSHOT.jar" deploy-path="/WEB-INF/lib" handle="module:/resource/SLP_TT_TransObj_JAR/SLP_TT_TransObj_JAR">
+            <dependency-type>uses</dependency-type>
+        </dependent-module>
+        <property name="java-output-path" value="/WeChatYangMei/build/classes"/>
+        <property name="context-root" value="weChat"/>
+    </wb-module>
+</project-modules>

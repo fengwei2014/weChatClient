@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans
+ xmlns="http://www.springframework.org/schema/beans"
+ xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+ xmlns:aop="http://www.springframework.org/schema/aop"
+ xmlns:tx="http://www.springframework.org/schema/tx"
+ xmlns:context="http://www.springframework.org/schema/context"
+ xsi:schemaLocation="http://www.springframework.org/schema/beans 
+                    http://www.springframework.org/schema/beans/spring-beans-2.5.xsd
+                    http://www.springframework.org/schema/tx 
+                    http://www.springframework.org/schema/tx/spring-tx.xsd
+                    http://www.springframework.org/schema/aop 
+                    http://www.springframework.org/schema/aop/spring-aop.xsd 
+                    http://www.springframework.org/schema/context
+                    http://www.springframework.org/schema/context/spring-context-2.5.xsd
+                    ">
+	 
+	 <bean id="dataSource" class="org.springframework.jndi.JndiObjectFactoryBean">  
+        <property name="jndiName">  
+            <value>java:comp/env/jdbc/DB2DataSource</value>  
+        </property>  
+    </bean>
+    
+    <bean id="dataSourcePCCAdp" class="org.springframework.jndi.JndiObjectFactoryBean">  
+        <property name="jndiName">  
+            <value>java:comp/env/jdbc/DB2DataSource</value>  
+        </property>  
+    </bean>
+    
+
+	<!-- **************************************************************** 事务配置 add by chensheng ***************************************************************** -->
+
+	<!-- 开启事务管理 -->
+	<bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
+				<property name="dataSource" ref="dataSource" />
+	</bean>
+	
+	<!-- 开启事务注解驱动 -->  
+    <tx:annotation-driven />
+    
+    <!-- 第一个 * —— 通配 任意返回值类型
+    	   ..* 匹配mgr包下的所有class
+    	   .*匹配所有类
+    	   (..)匹配所有方法
+     -->
+	<tx:advice id="txAdivce" transaction-manager="transactionManager">
+		<tx:attributes>
+	      	<tx:method name="new*" propagation="REQUIRED" rollback-for="Exception"/>
+	  	</tx:attributes>
+	</tx:advice>
+	
+
+	 <aop:config>  
+        <aop:pointcut id="interceptorPointCuts"  expression="execution(* slp.bss.mgr..*.*(..))" />  
+        <aop:advisor advice-ref="txAdivce"  pointcut-ref="interceptorPointCuts" />          
+     </aop:config>
+
+	<!-- **************************************************************** 事务配置         end                ***************************************************************** -->
+
+
+
+</beans>

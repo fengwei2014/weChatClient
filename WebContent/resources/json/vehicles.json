@@ -1,0 +1,195 @@
+{
+	"pojo": {
+		"obj": [{
+			"deviceId": 273,
+			"vehicleNo" : "浙B00437",
+			"createdTimestamp": 1417504765779,
+			"uploadTimestamp": 1422252521677,
+			"speed": 0,
+			"direction": 0,
+			"longitude": 121.632909,
+			"latitude": 29.887084,
+			"totalKM": 618735.3057999997,
+			"satelliteNum": 0,
+			"lockLogList": [{
+				"lockId": 0,
+				"seqNum": 1,
+				"curStatus": "LOCKSTATUS.CONNECTIONERROR.0000",
+				"broken": false,
+				"lowVot": false
+			}],
+			"thermometerLogList": [{
+				"thermometerId": 0,
+				"curTemperature": 14.5,
+				"seqNum": 1,
+				"curStatus": null
+			}, {
+				"thermometerId": 0,
+				"curTemperature": 16.6,
+				"seqNum": 2,
+				"curStatus": null
+			}],
+			"alarmLogList": [{
+				"alarmType": "ALARMTYPE.GPSLOCATIONERROR.0000",
+				"alarmValue": null,
+				"alarmContent": null
+			}, {
+				"alarmType": "ALARMTYPE.OILGROSSLESS.0000",
+				"alarmValue": null,
+				"alarmContent": null
+			}],
+			"tmpLogFlag": true,
+			"dailyFlag": false,
+			"messageContent": null,
+			"oilBoxGross": 4,
+			"oilBoxLevel": 0,
+			"totalOilWear": 0,
+			"sessionIp": "10.10.10.108",
+			"devicelogLatestId": 18,
+			"disconnectCountTotal": 35,
+			"disconnectCountDaily": 1,
+			"west": false,
+			"south": false,
+			"online": false
+		},{
+			"deviceId": 273,
+			"vehicleNo" : "浙B00437",
+			"createdTimestamp": 1417504765779,
+			"uploadTimestamp": 1422252521677,
+			"speed": 0,
+			"direction": 0,
+			"longitude": 121.632909,
+			"latitude": 29.887084,
+			"totalKM": 618735.3057999997,
+			"satelliteNum": 0,
+			"lockLogList": [{
+				"lockId": 0,
+				"seqNum": 1,
+				"curStatus": "LOCKSTATUS.CONNECTIONERROR.0000",
+				"broken": false,
+				"lowVot": false
+			}],
+			"thermometerLogList": [{
+				"thermometerId": 0,
+				"curTemperature": 14.5,
+				"seqNum": 1,
+				"curStatus": null
+			}, {
+				"thermometerId": 0,
+				"curTemperature": 16.6,
+				"seqNum": 2,
+				"curStatus": null
+			}],
+			"alarmLogList": [{
+				"alarmType": "ALARMTYPE.GPSLOCATIONERROR.0000",
+				"alarmValue": null,
+				"alarmContent": null
+			}, {
+				"alarmType": "ALARMTYPE.OILGROSSLESS.0000",
+				"alarmValue": null,
+				"alarmContent": null
+			}],
+			"tmpLogFlag": true,
+			"dailyFlag": false,
+			"messageContent": null,
+			"oilBoxGross": 4,
+			"oilBoxLevel": 0,
+			"totalOilWear": 0,
+			"sessionIp": "10.10.10.108",
+			"devicelogLatestId": 18,
+			"disconnectCountTotal": 35,
+			"disconnectCountDaily": 1,
+			"west": false,
+			"south": false,
+			"online": false
+		},{
+			"deviceId": 273,
+			"vehicleNo" : "浙B00437",
+			"createdTimestamp": 1417504765779,
+			"uploadTimestamp": 1422252521677,
+			"speed": 0,
+			"direction": 0,
+			"longitude": 121.632909,
+			"latitude": 29.887084,
+			"totalKM": 618735.3057999997,
+			"satelliteNum": 0,
+			"lockLogList": [{
+				"lockId": 0,
+				"seqNum": 1,
+				"curStatus": "LOCKSTATUS.CONNECTIONERROR.0000",
+				"broken": false,
+				"lowVot": false
+			}],
+			"thermometerLogList": [{
+				"thermometerId": 0,
+				"curTemperature": 14.5,
+				"seqNum": 1,
+				"curStatus": null
+			}, {
+				"thermometerId": 0,
+				"curTemperature": 16.6,
+				"seqNum": 2,
+				"curStatus": null
+			}],
+			"alarmLogList": [{
+				"alarmType": "ALARMTYPE.GPSLOCATIONERROR.0000",
+				"alarmValue": null,
+				"alarmContent": null
+			}, {
+				"alarmType": "ALARMTYPE.OILGROSSLESS.0000",
+				"alarmValue": null,
+				"alarmContent": null
+			}],
+			"tmpLogFlag": true,
+			"dailyFlag": false,
+			"messageContent": null,
+			"oilBoxGross": 4,
+			"oilBoxLevel": 0,
+			"totalOilWear": 0,
+			"sessionIp": "10.10.10.108",
+			"devicelogLatestId": 18,
+			"disconnectCountTotal": 35,
+			"disconnectCountDaily": 1,
+			"west": false,
+			"south": false,
+			"online": false
+		}],
+		"error": "",
+		"url": ""
+	},
+	"binaryValue": null,
+	"valueNode": true,
+	"numberType": null,
+	"containerNode": false,
+	"missingNode": false,
+	"array": false,
+	"object": false,
+	"number": false,
+	"integralNumber": false,
+	"floatingPointNumber": false,
+	"int": false,
+	"long": false,
+	"double": false,
+	"bigDecimal": false,
+	"bigInteger": false,
+	"textual": false,
+	"boolean": false,
+	"null": false,
+	"binary": false,
+	"textValue": null,
+	"booleanValue": false,
+	"numberValue": null,
+	"intValue": 0,
+	"longValue": 0,
+	"doubleValue": 0.0,
+	"decimalValue": 0,
+	"bigIntegerValue": 0,
+	"valueAsText": "{obj=com.ibm.slf.model.di.vo.DeviceLogLatest@3db33db3, error=, url=}",
+	"valueAsInt": 0,
+	"valueAsLong": 0,
+	"valueAsDouble": 0.0,
+	"valueAsBoolean": false,
+	"elements": [],
+	"fieldNames": [],
+	"fields": []
+}

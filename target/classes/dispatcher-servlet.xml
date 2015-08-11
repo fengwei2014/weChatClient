@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" 
+	xmlns:mvc="http://www.springframework.org/schema/mvc"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:task="http://www.springframework.org/schema/task" 
+	xmlns:util="http://www.springframework.org/schema/util"
+	 xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+        http://www.springframework.org/schema/beans/spring-beans-3.0.xsd
+        http://www.springframework.org/schema/mvc
+        http://www.springframework.org/schema/mvc/spring-mvc-3.2.xsd
+                http://www.springframework.org/schema/task  
+        http://www.springframework.org/schema/task/spring-task-3.1.xsd 
+        http://www.springframework.org/schema/util
+	    http://www.springframework.org/schema/util/spring-util-3.2.xsd 
+        http://www.springframework.org/schema/context 
+        http://www.springframework.org/schema/context/spring-context-3.0.xsd">
+    
+    <!-- Placeholders -->
+ 
+    <!-- 只扫描web下的controller -->         
+    <context:component-scan base-package="slp.tt.ui.web.controller"/>
+    <context:component-scan base-package="slp.bss.comn.war.web"/>
+   
+    <bean class="org.springframework.web.servlet.mvc.annotation.DefaultAnnotationHandlerMapping"/>
+	<bean class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter" />
+		    
+    <context:annotation-config />   
+    
+    <!--启动springMVC注解功能 -->
+	<mvc:annotation-driven />
+	
+	<!-- add by joey at 20130327 for excel export -->
+	<bean id="resourceViewResolver" class="org.springframework.web.servlet.view.XmlViewResolver">
+		<property name="order" value="0" />
+		<property name="location" value="classpath:views.xml" />
+	</bean>
+    
+    <bean id="jspViewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/page/" />
+		<property name="suffix" value=".jsp" />
+		<property name="order" value="1"></property>
+	</bean>
+	
+	<!-- SpringMVC上传文件时，需要配置MultipartResolver处理器 -->  
+    <bean id="multipartResolver" class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+        <property name="maxUploadSize" value="20971520"/>
+        <property name="maxInMemorySize" value="4096"/>
+    </bean>  
+      
+    <!-- SpringMVC在超出上传文件限制时，会抛出org.springframework.web.multipart.MaxUploadSizeExceededException -->  
+    <!-- 该异常是SpringMVC在检查上传的文件信息时抛出来的，而且此时还没有进入到Controller方法中 -->  
+    <bean id="exceptionResolver" class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver">  
+        <property name="exceptionMappings">  
+            <props>  
+                <!-- 遇到MaxUploadSizeExceededException异常时，自动跳转到/WEB-INF/jsp/error_fileupload.jsp页面 -->  
+                <prop key="org.springframework.web.multipart.MaxUploadSizeExceededException">error_fileupload</prop>  
+            </props>  
+        </property>  
+    </bean>  
+   <!--  静态资源加载 -->
+	<mvc:resources location="/resources/**" mapping="/resources/**"/>
+	<mvc:resources location="/index.jsp" mapping="/index.jsp"/>
+	
+ 
+  </beans>
